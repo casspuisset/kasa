@@ -1,9 +1,10 @@
-import homePageComponent from "../../components/homePageComponent/homePageComponent";
+import Header from "../../components/headerComponent/headerComponent";
+import HomePageComponent from "../../components/HomePageComponent/HomePageComponent";
 
-export default function homePage() {
+export default function HomePage() {
 	return (
 		<>
-			<homePageComponent />
+			<HomePageComponent />
 		</>
 	);
 }

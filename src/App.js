@@ -1,23 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
-import homePage from './pages/homePage/homePage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import aboutPage from './pages/aboutPage/aboutPage';
 import logementPage from './pages/logementPage/logementPage';
 import errorPage from './pages/errorPage/errorPage'
 import Header from './components/headerComponent/headerComponent'
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <main>
+    <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<homePage />}/>
-          <Route path="/about" element={<aboutPage />}/>
-          <Route path="/ogement/:id" element={<logementPage />}/>
-          <Route path="*" element={<errorPage />}/>
-        </Routes>
-      </main>
-    </div>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<aboutPage />} />
+          <Route path="/logement/:id" element={<logementPage />} />
+          <Route path="*" element={<errorPage />} />
+        </Routes>    
+    </BrowserRouter>
   );
 }
 
