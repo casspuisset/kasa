@@ -1,4 +1,4 @@
-import errorPageComponent from "../../components/errorPageComponent/errorPageComponent";
+import errorPageComponent from "../components/errorPageComponent";
 
 export default function errorPage() {
 	return (
