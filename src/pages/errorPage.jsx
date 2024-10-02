@@ -1,9 +1,9 @@
-import errorPageComponent from "../components/errorPageComponent";
+import ErrorPageComponent from "../components/errorPageComponent";
 
-export default function errorPage() {
+export default function ErrorPage() {
 	return (
 		<>
-			<errorPageComponent />
+			<ErrorPageComponent />
 		</>
 	);
 }

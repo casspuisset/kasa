@@ -1,9 +1,11 @@
 import NavComponent from "./navComponent";
+import logo from "../assets/logo.png"
 
 export default function Header() {
     return (
-        <header className="nav-component">
-            <NavComponent className="nav_header" />
+        <header className="header-component__Wrapper">
+            <img className="header-component__Logo" alt="Logo du site Kasa" src={logo}/>
+            <NavComponent className="header-component__Nav" />
         </header>
     )
 }

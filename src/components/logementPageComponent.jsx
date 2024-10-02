@@ -1,4 +1,4 @@
-export default function logementPageComponent() {
+export default function LogementPageComponent() {
     return (
             <logementPageComponent />
     )

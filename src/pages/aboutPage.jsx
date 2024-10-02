@@ -1,9 +1,9 @@
-import aboutPageComponent from "../components/aboutPageComponent";
+import AboutPageComponent from "../components/aboutPageComponent";
 
-export default function aboutPage() {
+export default function AboutPage() {
 	return (
 		<>
-			<aboutPageComponent />
+			<AboutPageComponent />
 		</>
 	);
 }

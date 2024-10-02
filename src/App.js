@@ -1,9 +1,11 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import aboutPage from './pages/aboutPage';
-import logementPage from './pages/logementPage';
-import errorPage from './pages/errorPage'
+import AboutPage from './pages/aboutPage';
+import LogementPage from './pages/logementPage';
+import ErrorPage from './pages/errorPage'
 import Header from './components/headerComponent'
 import HomePage from './pages/homePage';
+import Footer from './components/footerComponent';
+// import './styles/index.scss'
 
 function App() {
   return (
@@ -11,10 +13,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<aboutPage />} />
-          <Route path="/logement/:id" element={<logementPage />} />
-          <Route path="*" element={<errorPage />} />
-        </Routes>    
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/logement/:id" element={<LogementPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+        <Footer />
     </BrowserRouter>
   );
 }
