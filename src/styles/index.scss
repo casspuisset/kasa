@@ -1,3 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+//note : on va faire les marges du body à part pour faire coincider header/main/footer
+
+
+/**
+*
+*Partie header
+*
+*/
+.header-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    //adapter la taille du logo et du texte en taille proportionnelle
+}
+
 .nav-header {
-    display: flex
+    display: flex;
+    align-items: flex-end;
+
+    &__Home-page,
+    &__About-page {
+        text-decoration: none;
+        padding: 5px;
+
+        &:focus {
+            text-decoration-line: underline;
+        }
+    }
+
+}
+
+/**
+*
+*Partie footer
+*
+*/
+.footer-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding: 20px;
+
+    //note: faut changer le logo d'en bas
+    //pas fixé en bas pour le moment
+    &__Logo {
+        width: 100px; //base de travail à reprendre
+    }
+}
+
+/**
+*
+*Home page
+*
+*/
+.home-component {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    &__Gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+
+    }
+}
+article {
+    background-color: red;
+    padding: 20px;
+}
+
+article p {
+    color: white;
+    text-decoration: none; //pourquoi ça marche pas???
+}
+.banner-component {
+    &__Img {}
+
+    &__Text {}
+}
+
+/**
+*
+*About page
+*
+*/
+.about-component {
+
+    &__Collapse {
+
+        &__Dropdown {}
+    }
+}
+
+.collapse-component {
+
+    &__Dropdown {
+        &__Title {}
+
+        &__Content {}
+    }
+}
+
+/**
+*
+*Error page
+*
+*/
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    &__Title {
+
+    }
+    &__Description {
+
+    }
+    &__Link {
+
+    }
 }

@@ -1,11 +1,12 @@
 import bannerImage from "../assets/banner-about.png";
 import Collapse from "./collapseComponent.jsx";
 import aboutList from "../back/aboutList.json"
+import Banner from "./bannerComponent.jsx";
 
 export default function AboutPageComponent() {
     return (
             <div className="about-component">
-                {/* balise de l'image de bannière en about-component__Banner */}
+                <Banner image={bannerImage} texte=""/>
                 <div className="about-component__Collapse">
                   <div className="about-component__Collapse__Dropdown">
                     {aboutList.map((about) => {

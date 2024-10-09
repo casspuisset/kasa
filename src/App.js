@@ -5,7 +5,7 @@ import ErrorPage from './pages/errorPage'
 import Header from './components/headerComponent'
 import HomePage from './pages/homePage';
 import Footer from './components/footerComponent';
-// import './styles/index.scss'
+import './styles/index.scss'
 
 function App() {
   return (

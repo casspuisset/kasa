@@ -4,7 +4,7 @@ export default function Collapse({title, content}) {
             const [isOpen, setIsOpen] = useState(false);
             const display = () => {setIsOpen(!isOpen)};    
     return (
-                <div className="collapse-component__Wrapper">
+                <div className="collapse-component">
                     <div className="collapse-component__Dropdown__Title">
                         <h2 onClick={display}>{title}</h2>
                             {/* {isOpen ? (
