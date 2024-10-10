@@ -106,7 +106,11 @@ article p {
 .collapse-component {
 
     &__Dropdown {
-        &__Title {}
+        &__Title {
+        display: flex;
+        background-color: red;
+
+        }
 
         &__Content {}
     }
