@@ -64,6 +64,7 @@ body {
 */
 .home-component {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 20px;
 
@@ -75,6 +76,10 @@ body {
 
     }
 }
+.home-component img {
+    width: 100%;
+}
+
 article {
     background-color: red;
     padding: 20px;
