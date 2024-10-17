@@ -8,7 +8,6 @@ export default function AboutPageComponent() {
             <div className="about-component">
                 <Banner image={bannerImage} texte=""/>
                 <div className="about-component__Collapse">
-                  <div className="about-component__Collapse__Dropdown">
                     {aboutList.map((about) => {
                       return (
                         <div key={about.id}>
@@ -16,7 +15,6 @@ export default function AboutPageComponent() {
                         </div>
                       );
                     })}
-                  </div>
                 </div>
             </div>
           );
