@@ -20,10 +20,10 @@ export default function Carousel({ pictures }) {
             {/* cursors */}
 
             {arrayLength > 1 && (
-                <img src={vector_left} alt="Image précédente" onClick={prev} className="carousel__Button " />
+                <img src={vector_left} alt="Image précédente" onClick={prev} className="carousel__Button__Left " />
             )}
             {arrayLength > 1 && (
-                <img src={vector_right} alt="Image suivante" onClick={next} className="carousel__Button" />
+                <img src={vector_right} alt="Image suivante" onClick={next} className="carousel__Button__Right" />
             )}
 
             {/* Images */}

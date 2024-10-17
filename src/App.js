@@ -10,6 +10,7 @@ import './styles/index.scss'
 function App() {
   return (
     <BrowserRouter>
+    <div className='main'>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -17,6 +18,7 @@ function App() {
           <Route path="/logement/:id" element={<LogementPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+    </div>    
         <Footer />
     </BrowserRouter>
   );

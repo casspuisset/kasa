@@ -31,7 +31,11 @@ export default function LogementPageComponent() {
                     <p className="logement-page__Presentation__Logement__Location">
                         {currentLogement.location}
                     </p>
-                </div>
+                    <div className="logement-page__Presentation__Logement__Tag">
+                        {tagsList.map((tag) => (
+                            <Tag tags={tag} />
+                        ))}
+                    </div>                </div>
                 <div className="logement-page__Presentation__Host">
                     <p className="logement-page__Presentation__Host__Name">
                         {currentLogement.host.name}
@@ -41,15 +45,9 @@ export default function LogementPageComponent() {
                         src={currentLogement.host.picture}
                         alt={currentLogement.host.name}
                     />
+                    <Rate rating={currentLogement.rating} className="logement-page__Presentation__Host__Rate"/>
                 </div>
-                <div className="logement-page__Presentation__Other">
-                    <div className="logement-page__Presentation__Other__Tag">
-                        {tagsList.map((tag) => (
-                            <Tag tags={tag} />
-                        ))}
-                    </div>
-                    <Rate rating={currentLogement.rating} className="logement-page__Presentation__Other__Rate"/>
-                </div>
+
             </section>
 
 

@@ -1,8 +1,14 @@
+$primary-color: #ff6060;
+$secondary-color: #f7f7f7;
+
+.main {padding: 0 5% 0 5%;}
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    
 }
+
 //note : on va faire les marges du body à part pour faire coincider header/main/footer
 
 
@@ -67,6 +73,7 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    
 
     &__Gallery {
         display: grid;
@@ -76,12 +83,13 @@ body {
 
     }
 }
+
 .home-component img {
     width: 100%;
 }
 
 article {
-    background-color: red;
+    background-color: $primary-color;
     padding: 20px;
 }
 
@@ -89,10 +97,30 @@ article p {
     color: white;
     text-decoration: none; //pourquoi ça marche pas???
 }
-.banner-component {
-    &__Img {}
 
-    &__Text {}
+.banner-component {
+    border-radius: 10px;
+    height: 223px;
+    margin-bottom: 35px;
+    position: relative;
+
+    &__Img {
+
+        border-radius: 25px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+
+    &__Text {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
 }
 
 /**
@@ -110,15 +138,19 @@ article p {
 
 .collapse-component {
 
-    &__Dropdown {
-        &__Title {
+    &__Title {
         display: flex;
-        background-color: red;
+        background-color: $primary-color;
+        padding: 10px;
 
-        }
-
-        &__Content {}
     }
+
+    &__Content {
+        background-color: $secondary-color;
+        margin: 0;
+        padding: 10px;
+    }
+
 }
 
 /**
@@ -130,16 +162,14 @@ article p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: red;
-    &__Title {
+    color: $primary-color;
 
-    }
-    &__Description {
 
-    }
-    &__Link {
+    &__Title {}
 
-    }
+    &__Description {}
+
+    &__Link {}
 }
 
 
@@ -149,6 +179,59 @@ article p {
 *
 */
 
-.carousel__Button {
-    background-color: red;
+.carousel {
+    
+    &__Button {
+
+        &__Left {
+            background-color: $primary-color;
+
+        }
+
+        &__Right {
+            background-color: $primary-color;
+
+        }
+    }
+
+    &__Picture {}
+}
+
+.logement-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__Presentation {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        &__Logement {
+            &__Title {}
+
+            &__Location {}
+
+            &__Tag {}
+        }
+
+        &__Host {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            &__Name {}
+
+            &__Picture {}
+
+            &__Rate {}
+        }
+    }
+
+    &__Collapse {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 20px;
+        width: 100%;
+    }
 }

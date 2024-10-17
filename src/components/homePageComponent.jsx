@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Card from "./cardComponent";
 import back from "../back/back.json";
 import Banner from "./bannerComponent";
-import ImageToTake from "../assets/banner-home.png"
+import ImageToTake from "../assets/banner-home.png";
 
 export default function HomePageComponent() {
   return (
@@ -16,7 +16,7 @@ export default function HomePageComponent() {
             <article key={article.id}>
               <Link to={`/logement/${article.id}`}>
                 <Card title={article.title} cover={article.cover} />
-                <p>Ceci est une carte</p>
+                <p>{article.title}</p>
               </Link>
             </article>
           );
