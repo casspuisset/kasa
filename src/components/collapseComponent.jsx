@@ -8,14 +8,16 @@ export default function Collapse({ title, content }) {
     return (
         <div className="collapse-component">
             {/* va falloir remanier l'agencement des div pour que la sélection concerne toute la barre */}
-            <div className="collapse-component__Title"> 
-                <h2 onClick={display}>{title}
+            <div className="collapse-component__Title" onClick={display}> 
+                <h2>
+                    {title}
+
+                </h2>
                     {isOpen ? (
                         <img src={vector_down} alt="Replier" className="collapse-component__Dropdown__Title__Icon" />
                     ) : (
                         <img src={vector_up} alt="Déplier" className="collapse-component__Dropdown__Title__Icon" />
                     )}
-                </h2>
             </div>
             { }
             <div>

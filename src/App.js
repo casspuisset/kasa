@@ -10,8 +10,8 @@ import './styles/index.scss'
 function App() {
   return (
     <BrowserRouter>
-    <div className='main'>
         <Header />
+    <div className='main'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

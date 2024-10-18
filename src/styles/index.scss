@@ -1,16 +1,29 @@
 $primary-color: #ff6060;
-$secondary-color: #f7f7f7;
+$secondary-color: #f6f6f6;
 
-.main {padding: 0 5% 0 5%;}
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
 }
 
-//note : on va faire les marges du body à part pour faire coincider header/main/footer
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.main {
+  padding: 0 20px 20px 20px;
+  max-width: 1240px;
+  width: 100%;
+  flex: 1;
+}
 
 /**
 *
@@ -18,27 +31,30 @@ body {
 *
 */
 .header-component {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    //adapter la taille du logo et du texte en taille proportionnelle
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  max-width: 1240px;
+  //adapter la taille du logo et du texte en taille proportionnelle
 }
 
 .nav-header {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
 
-    &__Home-page,
-    &__About-page {
-        text-decoration: none;
-        padding: 5px;
+  &__Home-page,
+  &__About-page {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 24px;
 
-        &:focus {
-            text-decoration-line: underline;
-        }
+    &:focus {
+      text-decoration-line: underline;
     }
-
+  }
 }
 
 /**
@@ -47,20 +63,20 @@ body {
 *
 */
 .footer-component {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    background-color: black;
-    color: white;
-    margin: 0%;
-    padding: 20px;
+  width: 100%;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
 
-    //note: faut changer le logo d'en bas
-    //pas fixé en bas pour le moment
-    &__Logo {
-        width: 100px; //base de travail à reprendre
-    }
+  //note: faut changer le logo d'en bas
+  //pas fixé en bas pour le moment
+  &__Logo {
+    width: 100px; //base de travail à reprendre
+  }
 }
 
 /**
@@ -69,58 +85,61 @@ body {
 *
 */
 .home-component {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 
-    &__Gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-
-    }
+  &__Gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 25px;
+    background-color: $secondary-color;
+  }
 }
 
 .home-component img {
-    width: 100%;
+  width: 100%;
 }
 
 article {
-    background-color: $primary-color;
-    padding: 20px;
+  background-color: $primary-color;
+  padding: 20px;
+  border-radius: 25px;
 }
 
-article p {
-    color: white;
-    text-decoration: none; //pourquoi ça marche pas???
+article a {
+  text-decoration: none;
+  color: white;
 }
 
 .banner-component {
-    border-radius: 10px;
-    height: 223px;
-    margin-bottom: 35px;
-    position: relative;
+  border-radius: 10px;
+  height: 223px;
+  margin-bottom: 35px;
+  position: relative;
 
-    &__Img {
+  &__Img {
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 
-        border-radius: 25px;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-    }
-
-
-    &__Text {
-        position: absolute;
-        display: flex;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-    }
+  &__Text {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 1px black;
+  }
 }
 
 /**
@@ -129,49 +148,61 @@ article p {
 *
 */
 .about-component {
-
-    &__Collapse {
-
-        &__Dropdown {}
-    }
+  &__Collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 .collapse-component {
+  &__Title {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+  }
 
-    &__Title {
-        display: flex;
-        background-color: $primary-color;
-        padding: 10px;
-
-    }
-
-    &__Content {
-        background-color: $secondary-color;
-        margin: 0;
-        padding: 10px;
-    }
-
+  &__Content {
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 10px;
+  }
 }
 
+.collapse-component__Title h2 {
+  margin: 0;
+}
 /**
 *
 *Error page
 *
 */
 .error-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: $primary-color;
 
+  &__Title {
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0%;
+  }
 
-    &__Title {}
+  &__Description {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0%;
+  }
 
-    &__Description {}
-
-    &__Link {}
+  &__Link {
+    font-size: 18px;
+  }
 }
-
 
 /**
 *
@@ -180,58 +211,81 @@ article p {
 */
 
 .carousel {
-    
-    &__Button {
-
-        &__Left {
-            background-color: $primary-color;
-
-        }
-
-        &__Right {
-            background-color: $primary-color;
-
-        }
+  &__Button {
+    &__Left {
+      background-color: $primary-color;
     }
 
-    &__Picture {}
+    &__Right {
+      background-color: $primary-color;
+    }
+  }
+
+  &__Picture {
+  }
 }
 
 .logement-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__Presentation {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-    &__Presentation {
+    &__Logement {
+      &__Title {
+      }
+
+      &__Location {
+      }
+
+      &__Tag {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-
-        &__Logement {
-            &__Title {}
-
-            &__Location {}
-
-            &__Tag {}
-        }
-
-        &__Host {
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-
-            &__Name {}
-
-            &__Picture {}
-
-            &__Rate {}
-        }
+        gap: 20px;
+      }
     }
 
-    &__Collapse {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-column-gap: 20px;
-        width: 100%;
+    &__Host {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      &__Name {
+      }
+
+      &__Picture {
+      }
+
+      &__Rate {
+      }
     }
+  }
+
+  &__Collapse {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 20px;
+    width: 100%;
+  }
+}
+
+.tag-component {
+  background-color: $primary-color;
+  height: 25px;
+  padding: 0 10px;
+  border-radius: 10px;
+  min-width: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+
+  &__Button {
+    margin: 0;
+  }
 }
