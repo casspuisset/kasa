@@ -14,12 +14,11 @@ export default function Collapse({ title, content }) {
 
                 </h2>
                     {isOpen ? (
-                        <img src={vector_down} alt="Replier" className="collapse-component__Dropdown__Title__Icon" />
+                        <img src={vector_down} alt="Replier" className="collapse-component__Title__Icon" />
                     ) : (
-                        <img src={vector_up} alt="Déplier" className="collapse-component__Dropdown__Title__Icon" />
+                        <img src={vector_up} alt="Déplier" className="collapse-component__Title__Icon" />
                     )}
             </div>
-            { }
             <div>
                 {isOpen && <p className="collapse-component__Content" >{content}</p>}
             </div>

@@ -6,7 +6,7 @@ import Banner from "./bannerComponent.jsx";
 export default function AboutPageComponent() {
     return (
             <div className="about-component">
-                <Banner image={bannerImage} texte=""/>
+                <Banner image={bannerImage} texte="" page='About'/>
                 <div className="about-component__Collapse">
                     {aboutList.map((about) => {
                       return (

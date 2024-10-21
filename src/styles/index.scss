@@ -72,10 +72,9 @@ body {
   background-color: black;
   color: white;
 
-  //note: faut changer le logo d'en bas
-  //pas fixé en bas pour le moment
+
   &__Logo {
-    width: 100px; //base de travail à reprendre
+    width: 100px;
   }
 }
 
@@ -97,7 +96,18 @@ body {
     gap: 20px;
     border-radius: 25px;
     background-color: $secondary-color;
+
+    &__Card {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+    }
+
   }
+}
+
+article p {
+  text-decoration: none;
 }
 
 .home-component img {
@@ -106,13 +116,13 @@ body {
 
 article {
   background-color: $primary-color;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
   padding: 20px;
   border-radius: 25px;
-}
-
-article a {
-  text-decoration: none;
-  color: white;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .banner-component {
@@ -122,10 +132,23 @@ article a {
   position: relative;
 
   &__Img {
-    border-radius: 25px;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+
+    &__Home {
+      border-radius: 25px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(40%);
+    }
+
+    &__About {
+      border-radius: 25px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(70%);
+
+    }
   }
 
   &__Text {
@@ -159,10 +182,15 @@ article a {
   &__Title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: $primary-color;
     color: white;
     padding: 15px;
     border-radius: 5px;
+
+    &__Icon {
+      padding: inherit;
+    }
   }
 
   &__Content {
@@ -175,6 +203,7 @@ article a {
 .collapse-component__Title h2 {
   margin: 0;
 }
+
 /**
 *
 *Error page
@@ -184,9 +213,11 @@ article a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
   color: $primary-color;
-
+  gap: 75px;
+  margin-bottom: 75px;
+  
   &__Title {
     font-size: 288px;
     font-weight: 700;
@@ -200,7 +231,7 @@ article a {
   }
 
   &__Link {
-    font-size: 18px;
+    color: black;
   }
 }
 
@@ -211,35 +242,79 @@ article a {
 */
 
 .carousel {
+  position: relative;
+  overflow: hidden;
+  height: 415px;
+  width: 100%;
+
+  &__Picture {
+
+    &__Img {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   &__Button {
     &__Left {
-      background-color: $primary-color;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
     }
 
     &__Right {
-      background-color: $primary-color;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      cursor: pointer;
     }
+
   }
 
-  &__Picture {
+  &__Number {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
   }
+
 }
 
 .logement-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  gap: 20px;
   &__Presentation {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
     &__Logement {
+      display: flex;
+      flex-direction: column;
+
       &__Title {
+        color: $primary-color;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 0;
       }
 
       &__Location {
+        font-weight: 500;
       }
 
       &__Tag {
@@ -248,18 +323,26 @@ article a {
       }
     }
 
-    &__Host {
+    &__Right {
       display: flex;
       flex-direction: column;
       align-items: end;
+      gap: 20px;
+      &__Host {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
 
-      &__Name {
-      }
+        &__Name {
+          color: $primary-color;
+          text-wrap: wrap;
+        }
 
-      &__Picture {
-      }
-
-      &__Rate {
+        &__Picture {
+          border-radius: 50%;
+          height: 64px;
+        }
       }
     }
   }
@@ -270,6 +353,12 @@ article a {
     grid-column-gap: 20px;
     width: 100%;
   }
+}
+
+.rate-component {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .tag-component {

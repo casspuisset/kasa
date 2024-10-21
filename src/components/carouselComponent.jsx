@@ -15,7 +15,17 @@ export default function Carousel({ pictures }) {
 
   return (
     <div className="carousel">
-      {/* cursors */}
+
+      {/* Images */}
+
+      {pictures.map((logementImage, index) => (
+        <div key={index} className="carousel__Picture"  >
+          {index === currentPicture && (
+            <img src={logementImage} alt="appartement à louer" className="carousel__Picture__Img"/>
+          )}
+        </div>
+      ))}
+            {/* cursors */}
 
       {arrayLength > 1 && (
         <img
@@ -34,19 +44,10 @@ export default function Carousel({ pictures }) {
         />
       )}
 
-      {/* Images */}
-
-      {pictures.map((logementImage, index) => (
-        <div key={index} className="carousel__Picture">
-          {index === currentPicture && (
-            <img src={logementImage} alt="appartement à louer" />
-          )}
-        </div>
-      ))}
-
-      <span className="carousel__Picture__Number">
+      <p className="carousel__Number">
         {currentPicture + 1}/{arrayLength}
-      </span>
+      </p>
+
     </div>
   );
 }
