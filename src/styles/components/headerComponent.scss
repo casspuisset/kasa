@@ -1,0 +1,12 @@
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+  max-width: 1240px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 14px;
+  }
+}

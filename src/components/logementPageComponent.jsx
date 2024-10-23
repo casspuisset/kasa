@@ -38,16 +38,16 @@ export default function LogementPageComponent() {
                     </div>                </div>
                 <div className="logement-page__Presentation__Right">
                     <div className="logement-page__Presentation__Right__Host">
-                    <p className="logement-page__Presentation__Right__Host__Name">
-                        {currentLogement.host.name}
-                    </p>
-                    <img
-                        className="logement-page__Presentation__Right__Host__Picture"
-                        src={currentLogement.host.picture}
-                        alt={currentLogement.host.name}
-                    />
+                        <p className="logement-page__Presentation__Right__Host__Name">
+                            {currentLogement.host.name}
+                        </p>
+                        <img
+                            className="logement-page__Presentation__Right__Host__Picture"
+                            src={currentLogement.host.picture}
+                            alt={currentLogement.host.name}
+                        />
                     </div>
-                    <Rate rating={currentLogement.rating} className="logement-page__Presentation__Right__Rate"/>
+                    <Rate rating={currentLogement.rating} className="logement-page__Presentation__Right__Rate" />
                 </div>
 
             </section>

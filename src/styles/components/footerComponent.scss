@@ -1,0 +1,16 @@
+.footer-component {
+    width: 100%;
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+  
+  
+    &__Logo {
+      width: 100px;
+    }
+  }
+  

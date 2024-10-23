@@ -1,0 +1,33 @@
+.collapse-component {
+
+    &__Title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary-color;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform;
+        @media (max-width: $breakpoint) {
+            font-size: 13px;
+        }
+        &__Icon+&:active {
+            padding: inherit;
+            transition: 0.1s ease-in-out;
+            transform: rotate(180deg);
+
+        }
+    }
+
+    &__Content {
+        background-color: $secondary-color;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+.collapse-component__Title h2 {
+    margin: 0;
+}

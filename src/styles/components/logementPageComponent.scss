@@ -1,0 +1,91 @@
+.logement-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__Presentation {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: $breakpoint) {
+            flex-direction: column;
+        }
+
+        &__Logement {
+            display: flex;
+            flex-direction: column;
+
+            &__Title {
+                color: $primary-color;
+                font-size: 36px;
+                font-weight: 500;
+                margin: 0;
+
+                @media (max-width: $breakpoint) {
+                    font-size: 18px;
+                }
+            }
+
+            &__Location {
+                font-weight: 500;
+                @media (max-width: $breakpoint) {
+                    font-size: 14px;
+                }
+            }
+
+            &__Tag {
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        &__Right {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 20px;
+
+            @media (max-width: $breakpoint) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__Host {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+
+                &__Name {
+                    color: $primary-color;
+                    text-wrap: wrap;
+                    @media (max-width: $breakpoint) {
+                        font-size: 12px;
+                    }
+                }
+
+                &__Picture {
+                    border-radius: 50%;
+                    height: 64px;
+                }
+            }
+        }
+    }
+
+    &__Collapse {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 20px;
+        width: 100%;
+
+
+        @media (max-width: $breakpoint) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+
+.nav-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+  
+    &__Home-page,
+    &__About-page {
+      text-decoration: none;
+      padding: 5px;
+      font-size: 24px;
+      @media (max-width: $breakpoint) {
+        font-size: 12px;
+    }
+      &:focus {
+        text-decoration-line: underline;
+      }
+    }
+  }

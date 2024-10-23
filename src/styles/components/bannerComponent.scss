@@ -1,0 +1,48 @@
+.banner-component {
+    border-radius: 10px;
+    height: 223px;
+    margin-bottom: 35px;
+    position: relative;
+
+    @media (max-width: $breakpoint) {
+        height: 211px;
+    }
+
+    &__Img {
+
+        &__Home {
+            border-radius: 25px;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            filter: brightness(40%);
+        }
+
+        &__About {
+            border-radius: 25px;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            filter: brightness(70%);
+
+        }
+    }
+
+    &__Text {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: 48px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 0 1px black;
+
+        @media (max-width: $breakpoint) {
+            font-size: 24px;
+            left: 30%; //à modifier mais l'inspecteur fait n'imp  ><
+        }
+    }
+}
