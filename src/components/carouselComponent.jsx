@@ -32,7 +32,7 @@ export default function Carousel({ pictures }) {
           src={vector_left}
           alt="Image précédente"
           onClick={prev}
-          className="carousel__Button__Left "
+          className="carousel__Button Left "
         />
       )}
       {arrayLength > 1 && (
@@ -40,7 +40,7 @@ export default function Carousel({ pictures }) {
           src={vector_right}
           alt="Image suivante"
           onClick={next}
-          className="carousel__Button__Right"
+          className="carousel__Button Right"
         />
       )}
 

@@ -15,24 +15,11 @@
     }
 
     &__Button {
-        &__Left {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            cursor: pointer;
-        }
-
-        &__Right {
-            position: absolute;
-            right: 20px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            cursor: pointer;
-        }
-
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
     }
 
     &__Number {
@@ -47,4 +34,12 @@
         font-weight: 500;
     }
 
+}
+
+.Right {
+    right: 20px;
+}
+
+.Left {
+    left: 20px;
 }
