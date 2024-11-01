@@ -8,5 +8,9 @@
 
   @media (max-width: $breakpoint) {
     font-size: 14px;
+    padding: 10px;
+    img {
+      width: 50px;
+    }
   }
 }
