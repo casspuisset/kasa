@@ -25,14 +25,11 @@
     transform-origin: top;
     height: 0;
     transform: scaleY(0);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     // color: $secondary-color;
     @media (max-width: $breakpoint) {
       font-size: 13px;
       padding: 5px 10px;
-    }
-    & p {
-      opacity: 0; 
     }
   }
 }
@@ -46,7 +43,7 @@
   background-color: $secondary-color;
   height: auto;
   transform: scaleY(1);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   & p {
     opacity: 1; 
   }
