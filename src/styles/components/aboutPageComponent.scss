@@ -1,7 +1,11 @@
 .about-component {
-    &__Collapse {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
+  &__Collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (max-width: $breakpoint) {
+      gap: 5px;
     }
   }
+}

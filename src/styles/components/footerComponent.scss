@@ -8,7 +8,10 @@
     background-color: black;
     color: white;
   
-  
+    @media (max-width: $breakpoint) {
+      font-size: 12px;
+  }
+
     &__Logo {
       width: 100px;
     }

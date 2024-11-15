@@ -1,13 +1,16 @@
-export default function Card() {
+export default function Card({ title, cover }) {
+    const componentStyle = {
+        backgroundImage: `url(${cover})`,
+        backgroundPosition: `center`
+    }
+
     return (
-        function Card({ title, cover }) {
-            return (
-                <div className="card-component__Wrapper">
-                    <img src={cover} alt={title} className="card-component__Image" />
-                    <div className="card-component_Overlay"></div>
-                    <p className="card-component_Title">{title}</p>
-                </div>
-            );
-        }
-    )
+        
+        <div className="card-component"
+            style={componentStyle}
+        >
+            <p className="card-component__Title">{title}</p>
+        </div>
+    );
+
 }

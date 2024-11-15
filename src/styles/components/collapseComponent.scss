@@ -1,4 +1,6 @@
 .collapse-component {
+  margin-bottom: 5px;
+  
   &__Title {
     display: flex;
     justify-content: space-between;
@@ -9,9 +11,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: transform;
-    @media (max-width: $breakpoint) {
-      font-size: 13px;
-    }
+
     &__Icon {
       transform: rotate(0deg);
       transition: 0.3s ease-in-out;
@@ -20,11 +20,20 @@
 
   &__Content {
     margin: 0;
-    padding: 10px;
+    padding: 20px 30px;
+    text-align: justify;
     transform-origin: top;
     height: 0;
     transform: scaleY(0);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 1s ease-in-out;
+    // color: $secondary-color;
+    @media (max-width: $breakpoint) {
+      font-size: 13px;
+      padding: 5px 10px;
+    }
+    & p {
+      opacity: 0; 
+    }
   }
 }
 
@@ -37,9 +46,16 @@
   background-color: $secondary-color;
   height: auto;
   transform: scaleY(1);
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
+  & p {
+    opacity: 1; 
+  }
 }
 
 .collapse-component__Title h2 {
   margin: 0;
+
+  @media (max-width: $breakpoint) {
+    font-size: 13px;
+  }
 }

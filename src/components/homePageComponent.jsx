@@ -12,7 +12,6 @@ export default function HomePageComponent() {
     setItems(showItems < back.length ? showItems + 6 : showItems);
   };
 
-  console.log(back.length);
   return (
     <div class="home-component">
       <div>
@@ -32,7 +31,6 @@ export default function HomePageComponent() {
               >
                 <article key={article.id}>
                   <Card title={article.title} cover={article.cover} />
-                  <p>{article.title}</p>
                 </article>
               </Link>
             );

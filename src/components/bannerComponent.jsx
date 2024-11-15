@@ -1,16 +1,23 @@
-export default function Banner({image, texte, page}) {
-    let nameClass="";
-            if(page==="Home"){
-                nameClass = "banner-component__Img__Home"
-            } else {
-                nameClass = "banner-component__Img__About"
-            }
-            console.log(nameClass)
-            return (
-                <div className="banner-component">
-                    <img className={nameClass} src={image} alt='Bannière' />
-                    <p className="banner-component__Text">{texte}</p>
-                </div>
-            );
+export default function Banner({ image, texte, page }) {
+  let nameClass = "";
+  if (page === "Home") {
+    nameClass = "Home";
+  } else {
+    nameClass = "About";
+  }
 
+  const componentStyle = {
+    backgroundImage: `url(${image})`,
+    backgroundPosition: `center`,
+  }
+
+  return (
+    <div
+      className="banner-component"
+      style={componentStyle}
+    >
+      <div className={`banner-component__${nameClass}`}/>
+      <p className="banner-component__Text">{texte}</p>
+    </div>
+  );
 }

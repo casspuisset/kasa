@@ -2,15 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
   width: 100%;
   max-width: 1240px;
 
   @media (max-width: $breakpoint) {
     font-size: 14px;
-    padding: 10px;
     img {
-      width: 50px;
+      width: 145px;
+    }
+  }
+  &__Logo {
+    padding: 50px;
+    @media (max-width: $breakpoint) {
+      padding: 10px;
     }
   }
 }

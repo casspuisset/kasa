@@ -4,6 +4,10 @@
     height: 415px;
     width: 100%;
 
+    @media (max-width: $breakpoint) {
+        height: 255px;
+    }
+
     &__Picture {
 
         &__Img {
@@ -11,6 +15,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
+            border-radius: 10px;
         }
     }
 
@@ -20,6 +25,10 @@
         bottom: 0;
         margin: auto;
         cursor: pointer;
+
+        @media (max-width: $breakpoint) {
+            width: 24px;
+        }
     }
 
     &__Number {
@@ -32,14 +41,26 @@
         justify-content: center;
         color: white;
         font-weight: 500;
+
+        @media (max-width: $breakpoint) {
+            visibility: hidden;
+        }
     }
 
 }
 
 .Right {
     right: 20px;
+
+    @media (max-width: $breakpoint) {
+        right: 10px;
+    }
 }
 
 .Left {
     left: 20px;
+
+    @media (max-width: $breakpoint) {
+        left: 10px;
+    }
 }

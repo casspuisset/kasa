@@ -2,19 +2,31 @@
   display: flex;
   align-items: flex-end;
   gap: 20px;
+  padding: 50px;
+  @media (max-width: $breakpoint) {
+    padding: 10px;
+  }
 
   &__Link {
     text-decoration: none;
-    padding: 5px;
     font-size: 24px;
 
     @media (max-width: $breakpoint) {
       font-size: 12px;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       text-decoration: underline;
+    }
+  }
 
+  &__Active-link {
+    font-size: 24px;
+    text-decoration: underline;
+
+    @media (max-width: $breakpoint) {
+      font-size: 12px;
     }
   }
 }

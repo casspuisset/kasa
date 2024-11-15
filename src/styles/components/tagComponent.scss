@@ -1,19 +1,29 @@
 .tag-component {
-    background-color: $primary-color;
-    height: 25px;
-    padding: 0 10px;
-    border-radius: 10px;
-    min-width: 115px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    @media (max-width: $breakpoint) {
-      font-size: 10px;
+  background-color: $primary-color;
+  height: 25px;
+  padding: 0 10px;
+  border-radius: 10px;
+  min-width: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint) {
+    font-size: 10px;
   }
-    &__Button {
-      margin: 0;
+
+  &__Button {
+    margin: 0;
+    vertical-align: middle;
+
+    @media (max-width: $breakpoint) {
+      height: 18px;
+      min-width: 84px;
+      flex-wrap: wrap;
     }
   }
+}
