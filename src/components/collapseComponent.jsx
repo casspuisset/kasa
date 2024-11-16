@@ -1,5 +1,4 @@
 import vector_up from "../assets/vector_up.png";
-import vector_down from "../assets/vector_down.png";
 import { useState } from "react";
 
 export default function Collapse({ title, content }) {

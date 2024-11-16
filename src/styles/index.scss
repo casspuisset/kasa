@@ -25,7 +25,7 @@ body {
   flex: 1;
   @media (max-width: $breakpoint) {
     padding: 0 10px 10px 10px;
-}
+  }
 }
 
 @import "./components/headerComponent.scss";
@@ -33,18 +33,14 @@ body {
 
 @import "./components/footerComponent.scss";
 
-
 @import "./components/homePageComponent.scss";
 @import "./components/bannerComponent.scss";
 @import "./components/cardComponent.scss";
 
-
 @import "./components/aboutPageComponent.scss";
 @import "./components/collapseComponent.scss";
 
-
 @import "./components/errorPageComponent.scss";
-
 
 @import "./components/logementPageComponent.scss";
 @import "./components/carouselComponent.scss";

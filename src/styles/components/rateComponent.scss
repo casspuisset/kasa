@@ -1,15 +1,15 @@
 .rate-component {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    img {
-        width: 18px;
-    }
-    @media (max-width: $breakpoint) {
-            gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  img {
+    width: 18px;
+  }
+  @media (max-width: $breakpoint) {
+    gap: 5px;
 
-        img {
-            width: 13px;
-        }
+    img {
+      width: 13px;
     }
+  }
 }

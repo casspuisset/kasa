@@ -1,6 +1,6 @@
 .collapse-component {
   margin-bottom: 5px;
-  
+
   &__Title {
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@
   transform: scaleY(1);
   transition: 0.3s ease-in-out;
   & p {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
